@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Box w="full">
       <Container maxW="1232px" w="full" pt="132px" pb="100px">
-        <Grid templateColumns={'repeat(12,1fr)'} rowGap={'16px'}>
+        <Grid templateColumns={'repeat(12,1fr)'} columnGap={'16px'}>
           <GridItem colSpan={2} colStart={6} mb="1">
             <Heading as="h6" fontSize={'16px'} color="brand.primary" fontWeight={'400'}>
               ABOUT US

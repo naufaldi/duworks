@@ -9,6 +9,8 @@ import {
   ScrollRestoration,
   useCatch,
 } from '@remix-run/react'
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/700.css'
 import theme from './styles/theme'
 import Header from './components/layout/header'
 

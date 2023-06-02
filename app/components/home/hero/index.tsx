@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <Box w="full" mt="80px">
       <Container maxW="1232px" w="full" pt="101px" pb="108px">
-        <Grid templateColumns={'repeat(12,1fr)'} rowGap={'16px'}>
+        <Grid templateColumns={'repeat(12,1fr)'} columnGap={'16px'}>
           <GridItem colSpan={5} display={'flex'} flexDir={'column'} alignItems={'flex-start'}>
             <Heading
               as="h2"
@@ -33,8 +33,8 @@ const Hero = () => {
           <GridItem colSpan={6} colEnd={13} position={'relative'} h="412px">
             <Image
               src="/images/home/hero-left.png"
-              width={'296px'}
-              height="364px"
+              width={'290px'}
+              height="360px"
               position={'absolute'}
               top="0"
               left="0"
@@ -50,8 +50,8 @@ const Hero = () => {
             />
             <Image
               src="/images/home/hero-right.png"
-              width={'296px'}
-              height="364px"
+              width={'290px'}
+              height="360px"
               position={'absolute'}
               bottom="0"
               right="0"
