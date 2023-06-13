@@ -9,6 +9,7 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import React from 'react'
+
 import OvalRed from '~/components/icons/home/OvalRed'
 import { ServiceList } from '~/constant/serviceList'
 

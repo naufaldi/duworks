@@ -1,5 +1,6 @@
-import { Button } from './button/index'
 import { extendTheme } from '@chakra-ui/react'
+
+import { Button } from './button/index'
 
 const theme = extendTheme({
   fonts: {

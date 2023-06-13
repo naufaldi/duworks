@@ -1,5 +1,6 @@
 import { Box, Container, Grid, GridItem, Heading, Image } from '@chakra-ui/react'
 import React from 'react'
+
 import CurveRed from '~/components/icons/home/CurveRed'
 
 const About = () => {

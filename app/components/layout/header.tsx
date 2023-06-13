@@ -1,14 +1,15 @@
 import {
   Box,
+  Button,
   Container,
   Flex,
-  Link as ChakraLink,
   HStack,
-  Button,
+  Link as ChakraLink,
 } from '@chakra-ui/react';
-import React from 'react';
-import Logo from '../icons/logo';
 import { Link } from '@remix-run/react';
+import React from 'react';
+
+import Logo from '../icons/logo';
 import MessagesIcon from '../icons/messages';
 
 function Header() {

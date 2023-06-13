@@ -5,7 +5,7 @@
     "build": "remix build",
     "dev": "remix dev",
     "typecheck": "tsc",
-    "lint:fix": "eslint src --fix && yarn format",
+    "lint:fix": "eslint app --fix && yarn format",
     "lint:strict": "eslint --max-warnings=0 src"
   },
   "dependencies": {

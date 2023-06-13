@@ -1,4 +1,4 @@
-import { ChakraProvider, Box, Heading } from '@chakra-ui/react'
+import { Box, ChakraProvider, Heading } from '@chakra-ui/react'
 import type { MetaFunction } from '@remix-run/node'
 import {
   Links,
@@ -9,10 +9,12 @@ import {
   ScrollRestoration,
   useCatch,
 } from '@remix-run/react'
+
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/700.css'
-import theme from './styles/theme'
+
 import Header from './components/layout/header'
+import theme from './styles/theme'
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
