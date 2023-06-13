@@ -10,10 +10,16 @@ const Hero = () => {
     <Box w="full" mt="80px">
       <Container maxW="1232px" w="full" pt="101px" pb="108px">
         <Grid templateColumns={'repeat(12,1fr)'} columnGap={'16px'}>
-          <GridItem colSpan={5} display={'flex'} flexDir={'column'} alignItems={'flex-start'}>
+          <GridItem
+            colSpan={{ sm: 12, lg: 5 }}
+            display={'flex'}
+            flexDir={'column'}
+            alignItems={'flex-start'}
+            justifyContent={{ sm: 'center', xl: 'flex-start' }}
+          >
             <Heading
               as="h2"
-              fontSize="48px"
+              fontSize={{ sm: '42px', xl: '48px' }}
               fontWeight="500"
               mb="1"
               color="brand.secondary"
@@ -30,16 +36,27 @@ const Hero = () => {
               <ArrowRight boxSize={'24px'} ml="8px" />
             </Button>
           </GridItem>
-          <GridItem colSpan={6} colEnd={13} position={'relative'} h="412px">
-            <Image
-              src="/images/home/hero-left.png"
-              width={'290px'}
-              height="360px"
-              position={'absolute'}
-              top="0"
-              left="0"
-              alt="Duworks"
-            />
+          <GridItem
+            colSpan={6}
+            colEnd={13}
+            position={'relative'}
+            h="412px"
+            display={'flex'}
+            alignItems={{ sm: 'center', xl: 'flex-start' }}
+            justifyContent={'center'}
+            gap="16px"
+          >
+            <Box>
+              <Image
+                src="/images/home/hero-left.png"
+                width={'100%'}
+                height="auto"
+                position={'relative'}
+                top="0"
+                left="0"
+                alt="Duworks"
+              />
+            </Box>
             <CurveRed
               position={'absolute'}
               zIndex={'2'}
@@ -48,15 +65,18 @@ const Hero = () => {
               w="101px"
               h="124px"
             />
-            <Image
-              src="/images/home/hero-right.png"
-              width={'290px'}
-              height="360px"
-              position={'absolute'}
-              bottom="0"
-              right="0"
-              alt="Duworks"
-            />
+            <Box pt="28px">
+              <Image
+                src="/images/home/hero-right.png"
+                mt="28px"
+                width={'100%'}
+                height="auto"
+                position={'relative'}
+                bottom="0"
+                right="0"
+                alt="Duworks"
+              />
+            </Box>
           </GridItem>
         </Grid>
       </Container>

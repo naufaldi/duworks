@@ -14,7 +14,13 @@ const About = () => {
             </Heading>
           </GridItem>
           <GridItem colSpan={12} mb="24px">
-            <Heading as="h3" fontSize={'40px'} lineHeight={'56px'} color="brand.secondary">
+            <Heading
+              as="h3"
+              fontSize={'40px'}
+              fontWeight={'400'}
+              lineHeight={'56px'}
+              color="brand.secondary"
+            >
               We are Malang-based UX design agency, we specialize in creating user-centered designs
               that are{' '}
               <Box as="span" color="brand.primary">
