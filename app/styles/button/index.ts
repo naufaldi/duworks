@@ -11,6 +11,7 @@ export const Button = defineStyleConfig({
       color: 'brand.secondary',
       paddingTop: '12px',
       paddingBottom: '12px',
+      border: 'none',
     },
   },
   variants: {

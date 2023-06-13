@@ -15,6 +15,7 @@ import '@fontsource/inter/700.css'
 
 import Header from './components/layout/header'
 import theme from './styles/theme'
+import Footer from './components/layout/footer'
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -53,6 +54,7 @@ export default function App() {
       <ChakraProvider theme={theme}>
         <Header />
         <Outlet />
+        <Footer />
       </ChakraProvider>
     </Document>
   )
