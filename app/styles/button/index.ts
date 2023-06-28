@@ -11,7 +11,7 @@ export const Button = defineStyleConfig({
       color: 'brand.secondary',
       paddingTop: '12px',
       paddingBottom: '12px',
-      border: 'none',
+      border: '0',
     },
   },
   variants: {
@@ -19,6 +19,12 @@ export const Button = defineStyleConfig({
       border: '1px solid',
       borderColor: '#A5B3CF',
       color: 'brand.secondary',
+    },
+    white: {
+      border: '1px solid',
+      borderColor: 'white',
+      color: 'brand.secondary',
+      bg: 'white',
     },
   },
   // The default size and variant values
