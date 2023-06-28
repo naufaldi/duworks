@@ -5,6 +5,7 @@
  },
  
  "extends": [
+  "@remix-run/eslint-config",
    "plugin:@typescript-eslint/recommended",
    "prettier"
  ],

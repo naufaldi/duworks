@@ -35,16 +35,21 @@ const PortfolioList = [
 
 const Portfolio = () => {
   return (
-    <Box>
-      <Container maxW="1232px" w="full" pt="100px" pb="123px">
-        <Grid templateColumns={'repeat(12,1fr)'} columnGap={'16px'}>
-          <GridItem colSpan={2} colStart={6} mb="16px">
-            <Heading as="h6" fontSize={'16px'} color="brand.primary" fontWeight={'400'}>
+    <Box as="section" w="full">
+      <Container
+        maxW="1232px"
+        w="full"
+        pt={{ base: '50px', sm: '60px', lg: '100px' }}
+        pb={{ base: '50px', sm: '80px', lg: '123px' }}
+      >
+        <Grid templateColumns={{ base: 'repeat(6,1fr)', sm: "repeat(12,1fr)" }} columnGap="16px">
+          <GridItem colSpan={{ base: 6, sm: 2 }} colStart={{ base: 1, sm: 6 }} mb="16px">
+            <Heading as="h6" fontSize="16px" color="brand.primary" fontWeight="400">
               PORTFOLIO
             </Heading>
           </GridItem>
-          <GridItem colSpan={12} mb="32px">
-            <Heading as="h2" fontSize={'40px'} fontWeight={'400'} color="brand.secondary">
+          <GridItem colSpan={{ base: 6, sm: 12 }} mb="32px">
+            <Heading as="h2" fontSize="40px" fontWeight="400" color="brand.secondary">
               Check out our portfolio to see examples of{' '}
               <Box as="span" color="brand.primary">
                 our successful projects
@@ -53,7 +58,7 @@ const Portfolio = () => {
             </Heading>
           </GridItem>
           {PortfolioList.map((item, index) => (
-            <GridItem colSpan={item.size} key={index} mb="16px">
+            <GridItem colSpan={{ base: 6, sm: item.size }} key={index} mb="16px">
               <Image src={item.image} alt={item.alt} w="full" h="auto" />
             </GridItem>
           ))}

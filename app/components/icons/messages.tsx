@@ -1,9 +1,9 @@
-import { Icon, IconProps } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import type { IconProps } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
+import type { FC } from 'react';
 
-type MessageIconProps = IconProps & {};
 
-const MessagesIcon: FC<MessageIconProps> = (props) => {
+const MessagesIcon: FC<IconProps> = (props) => {
   return (
     <Icon
       {...props}

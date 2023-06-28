@@ -13,9 +13,9 @@ import {
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/700.css'
 
+import Footer from './components/layout/footer'
 import Header from './components/layout/header'
 import theme from './styles/theme'
-import Footer from './components/layout/footer'
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',

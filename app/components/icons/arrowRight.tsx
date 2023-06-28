@@ -1,5 +1,7 @@
-import { Icon, IconProps } from '@chakra-ui/react'
-import React, { FC } from 'react'
+import type { IconProps } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react'
+import type { FC } from 'react';
+import React from 'react'
 
 const ArrowRight: FC<IconProps> = (props) => {
   return (
