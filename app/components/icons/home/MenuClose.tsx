@@ -1,4 +1,5 @@
-import { Icon, IconProps } from '@chakra-ui/react'
+import type { IconProps } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react'
 import type { FC } from 'react'
 
 const MenuClose: FC<IconProps> = (props) => {
