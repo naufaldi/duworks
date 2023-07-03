@@ -1,6 +1,6 @@
 # [Duworks Landingpage](https://duworks.vercel.app/) - Free Landingpage Template Agency
 
-Duworks Landingpage is an open source, apps landing page template for [Chakra UI](https://chakra-ui.com/) and [Remix](https://remix.run/) coded by [Faldi](twitter.com/f2aldi) and design from [Satriya](https://twitter.com/satriyakur95).
+Duworks Landingpage is an open source, apps landing page template for [Chakra UI](https://chakra-ui.com/) and [Remix](https://remix.run/) coded by [Faldi](twitter.com/f2aldi) and design from [Ivan](https://twitter.com/fflatburger).
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 
 ## Creator
 
-[Duworks Landingpage](https://duworks.vercel.app/) was coded and modified by and is maintained by **[me](https://github.com/naufaldi/)**, and dekstop by [Satriya](https://twitter.com/satriyakur95)
+[Duworks Landingpage](https://duworks.vercel.app/) was coded and modified by and is maintained by **[me](https://github.com/naufaldi/)**, and dekstop by [Ivan](https://twitter.com/fflatburger)
 
 ## Copyright and License
 
