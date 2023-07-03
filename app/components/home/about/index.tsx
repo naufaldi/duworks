@@ -12,21 +12,21 @@ const About = () => {
         w="full"
         pt={{ base: '50px', sm: '80px', lg: '132px' }}
         pb={{ base: '50px', sm: '50px', lg: '100px' }}
-        position={'relative'}
+        position="relative"
       >
         <Circle
           boxSize={{ base: '369px', sm: '635px' }}
-          position={'absolute'}
+          position="absolute"
           top={{ base: 'auto', sm: '152px' }}
           left="50%"
           bottom={{ base: '60px', sm: 'auto' }}
-          transform={' translateX(-50%)'}
+          transform=" translateX(-50%)"
         />
         <Grid
           templateColumns={{ base: 'repeat(6m1fr)', sm: 'repeat(12,1fr)' }}
           columnGap="16px"
-          position={'relative'}
-          zIndex={'2'}
+          position="relative"
+          zIndex="2"
         >
           <GridItem colSpan={{ base: 4, sm: 2 }} colStart={{ base: 1, sm: 6 }} mb="1">
             <Heading
@@ -34,7 +34,7 @@ const About = () => {
               fontSize="16px"
               color="brand.primary"
               fontWeight="400"
-              textAlign={'center'}
+              textAlign="center"
             >
               ABOUT US
             </Heading>

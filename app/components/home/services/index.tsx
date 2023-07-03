@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 
-import OvalRed from '~/components/icons/home/OvalRed'
 import Circle from '~/components/pattern/service/circle'
 import { ServiceList } from '~/constant/serviceList'
 
@@ -22,11 +21,11 @@ const Services = () => {
         maxW="1232px"
         w="full"
         py={{ base: '50px', sm: '60px', lg: '100px' }}
-        position={'relative'}
+        position="relative"
       >
         <Circle
           boxSize={{ base: '369px', sm: '635px' }}
-          position={'absolute'}
+          position="absolute"
           top={{ base: '346px', sm: '100px', lg: '-170px' }}
           right={{ base: '50%', lg: '-230px' }}
           transform={{ base: 'translateX(50%)', lg: 'none' }}
@@ -34,8 +33,8 @@ const Services = () => {
         <Grid
           templateColumns={{ base: 'repeat(6,1fr)', sm: 'repeat(12,1fr)' }}
           columnGap="16px"
-          position={'relative'}
-          zIndex={'2'}
+          position="relative"
+          zIndex="2"
         >
           <GridItem colSpan={{ base: 6, sm: 1 }} mb="14px">
             <Heading as="h6" fontSize="16px" color="brand.primary" fontWeight="400">

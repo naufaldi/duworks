@@ -15,17 +15,17 @@ const Hero = () => {
         w="full"
         pt="101px"
         pb={{ base: '56px', sm: '108px' }}
-        position={'relative'}
+        position="relative"
       >
         <CircleLeft
           boxSize={{ base: '369px', sm: '635px' }}
-          position={'absolute'}
+          position="absolute"
           top={{ base: '0px', sm: '-140px', lg: '-156px' }}
           left={{ base: '-120px', sm: '-210px', lg: '-160px' }}
         />
         <CircleRight
           boxSize={{ base: '369px', sm: '635px' }}
-          position={'absolute'}
+          position="absolute"
           top={{ base: 'unset', lg: '-26px' }}
           bottom={{ base: '-80px', sm: '-100px', lg: 'unset' }}
           right={{ base: '-100px', sm: '-160px' }}
@@ -33,8 +33,8 @@ const Hero = () => {
         <Grid
           templateColumns={{ base: 'repeat(6,1fr)', sm: 'repeat(12,1fr)' }}
           columnGap="16px"
-          position={'relative'}
-          zIndex={'2'}
+          position="relative"
+          zIndex="2"
         >
           <GridItem
             colSpan={{ base: 6, sm: 12, lg: 6 }}
@@ -64,7 +64,7 @@ const Hero = () => {
               color="#7884A0"
               mb="32px"
               lineHeight="24px"
-              maxW={'436px'}
+              maxW="436px"
               w="full"
             >
               We're a User Experience consultant and agency that provides a range of services to

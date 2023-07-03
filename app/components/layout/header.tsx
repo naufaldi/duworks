@@ -5,16 +5,16 @@ import {
   Flex,
   HStack,
   Link as ChakraLink,
-  useDisclosure,
   Slide,
+  useDisclosure,
 } from '@chakra-ui/react'
 import { Link as RemixLink } from '@remix-run/react'
+import { useEffect, useState } from 'react'
 
 import Menu from '../icons/home/Menu'
+import MenuClose from '../icons/home/MenuClose'
 import Logo from '../icons/logo'
 import MessagesIcon from '../icons/messages'
-import MenuClose from '../icons/home/MenuClose'
-import { useEffect, useState } from 'react'
 
 interface listMenuMobileProps {
   link: string
@@ -68,7 +68,9 @@ function Header() {
     >
       <Container maxW="1230px" mx="auto" w="full">
         <Flex w="full" justifyContent="space-between" alignItems="center">
-          <Logo w="122px" h="64px" zIndex={'15'} />
+          <ChakraLink as={RemixLink} to="/">
+            <Logo w="122px" h="64px" zIndex="15" />
+          </ChakraLink>
           <HStack spacing="56px" display={{ base: 'none', sm: 'flex' }}>
             <ChakraLink as={RemixLink} to="/" p="8px">
               About
@@ -96,9 +98,9 @@ function Header() {
           </Button>
           <Button
             display={{ base: 'flex', sm: 'none' }}
-            width={'32px'}
-            height={'32px'}
-            zIndex={'15'}
+            width="32px"
+            height="32px"
+            zIndex="15"
             border="0"
             onClick={onToggle}
           >
@@ -109,12 +111,12 @@ function Header() {
       {/* Menu Dropdown Mobile */}
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
         <Box mt="80px" bg="white" py="32px" px="80px" h="470px">
-          <Flex flexDir={'column'} gap="56px" alignItems={'center'}>
+          <Flex flexDir="column" gap="56px" alignItems="center">
             {listMenuMobile.map((item, index) => (
               <ChakraLink
                 as={RemixLink}
                 key={index}
-                textAlign={'center'}
+                textAlign="center"
                 onClick={onToggle}
                 to={item.link}
                 py="12px"
