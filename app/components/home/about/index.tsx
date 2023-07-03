@@ -15,10 +15,11 @@ const About = () => {
         position={'relative'}
       >
         <Circle
-          boxSize={'635px'}
+          boxSize={{ base: '369px', sm: '635px' }}
           position={'absolute'}
-          top="152px"
+          top={{ base: 'auto', sm: '152px' }}
           left="50%"
+          bottom={{ base: '60px', sm: 'auto' }}
           transform={' translateX(-50%)'}
         />
         <Grid
@@ -63,7 +64,7 @@ const About = () => {
               position="absolute"
               top="-8px"
               left={{ base: '-10px', sm: '-50px' }}
-              width={{ base: '39px', lg: '101px' }}
+              width={{ base: '39px', sm: '101px' }}
               height={{ base: '48px', sm: '124px' }}
               zIndex="2"
             />

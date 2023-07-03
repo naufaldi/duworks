@@ -23,7 +23,13 @@ const Services = () => {
         py={{ base: '50px', sm: '60px', lg: '100px' }}
         position={'relative'}
       >
-        <Circle boxSize={'635px'} position={'absolute'} top="-170px" right="-230px" />
+        <Circle
+          boxSize={{ base: '369px', sm: '635px' }}
+          position={'absolute'}
+          top={{ base: '346px', sm: '100px', lg: '-170px' }}
+          right={{ base: '50%', lg: '-230px' }}
+          transform={{ base: 'translateX(50%)', lg: 'none' }}
+        />
         <Grid
           templateColumns={{ base: 'repeat(6,1fr)', sm: 'repeat(12,1fr)' }}
           columnGap="16px"

@@ -17,8 +17,19 @@ const Hero = () => {
         pb={{ base: '56px', sm: '108px' }}
         position={'relative'}
       >
-        <CircleLeft boxSize={'635px'} position={'absolute'} top="-156px" left="-160px" />
-        <CircleRight boxSize={'635px'} position={'absolute'} top="-26px" right="-160px" />
+        <CircleLeft
+          boxSize={{ base: '369px', sm: '635px' }}
+          position={'absolute'}
+          top={{ base: '0px', sm: '-140px', lg: '-156px' }}
+          left={{ base: '-120px', sm: '-210px', lg: '-160px' }}
+        />
+        <CircleRight
+          boxSize={{ base: '369px', sm: '635px' }}
+          position={'absolute'}
+          top={{ base: 'unset', lg: '-26px' }}
+          bottom={{ base: '-80px', sm: '-100px', lg: 'unset' }}
+          right={{ base: '-100px', sm: '-160px' }}
+        />
         <Grid
           templateColumns={{ base: 'repeat(6,1fr)', sm: 'repeat(12,1fr)' }}
           columnGap="16px"
@@ -42,7 +53,11 @@ const Hero = () => {
               maxW="519px"
               w="full"
             >
-              Crafting seamless user experiences that drive results
+              Crafting seamless{' '}
+              <Box as="span" color="brand.primary">
+                user experiences
+              </Box>{' '}
+              that drive results
             </Heading>
             <Text
               fontSize={{ base: '14px', sm: '16px' }}

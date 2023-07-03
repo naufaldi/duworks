@@ -8,6 +8,9 @@ const theme = extendTheme({
       html: {
         overflowX: 'hidden',
       },
+      body: {
+        overflowX: 'hidden',
+      },
     },
   },
   fonts: {
