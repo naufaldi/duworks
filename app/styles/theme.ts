@@ -5,8 +5,13 @@ import { Button } from './button/index'
 const theme = extendTheme({
   styles: {
     global: {
+<<<<<<< HEAD
       'html, body': {
         scrollBehavior: 'smooth',
+=======
+      html: {
+        overflowX: 'hidden',
+>>>>>>> ab5b466ed0cdc857a0dbe739f061f6735c07b688
       },
     },
   },
