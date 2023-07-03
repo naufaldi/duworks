@@ -4,10 +4,36 @@ import { Link } from '@remix-run/react'
 import Menu from '../icons/home/Menu'
 import Logo from '../icons/logo'
 import MessagesIcon from '../icons/messages'
+import { useEffect, useState } from 'react'
 
 function Header() {
+  const [scrollPosition, setScrollPosition] = useState<number>(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset
+      setScrollPosition(position)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  console.log('scrollPosition', scrollPosition)
   return (
-    <Box as="header" w="full" py="8px" position="fixed" top="0" right="0" left="0" bg="white" zIndex="3">
+    <Box
+      as="header"
+      w="full"
+      py="8px"
+      position="fixed"
+      top="0"
+      right="0"
+      left="0"
+      bg={scrollPosition < 10 ? 'transparent' : 'white'}
+      boxShadow={scrollPosition < 10 ? 'none' : 'lg'}
+      zIndex="3"
+    >
       <Container maxW="1230px" mx="auto" w="full">
         <Flex w="full" justifyContent="space-between" alignItems="center">
           <Logo w="122px" h="64px" />
@@ -36,7 +62,7 @@ function Header() {
             Contact Us
             <MessagesIcon ml="8px" boxSize="24px" />
           </Button>
-          <Button width={"32px"} height={'32px'} border="0">
+          <Button width={'32px'} height={'32px'} border="0" display={{ base: 'block', sm: 'none' }}>
             <Menu boxSize="32px" />
           </Button>
         </Flex>

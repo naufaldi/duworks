@@ -18,7 +18,7 @@ const Footer = () => {
             </Box>
           </Heading>
           <Flex w="full" flexDir={{ base: 'column', sm: 'row' }} justifyContent="space-between">
-            <Button variant="white" maxW="162px" w="full" mb={{ base: "64px", sm: '0px' }}>
+            <Button variant="white" maxW="162px" w="full" mb={{ base: '64px', sm: '0px' }}>
               Let’s Talks
               <ArrowRight boxSize="24px" ml="8px" />
             </Button>
@@ -36,12 +36,21 @@ const Footer = () => {
                 <Instagram boxSize="24px" />
               </Link>
             </HStack>
-            <Text display={{ base: 'block', sm: "hidden" }} mx="auto" fontSize="16px" color="#ffffff">
+            <Text display={{ base: 'block', sm: 'none' }} mx="auto" fontSize="16px" color="#ffffff">
               helo@dedux.com
             </Text>
           </Flex>
-          <Flex justifyContent="space-between" flexDir={{ base: 'column', sm: 'row' }} alignItems="center" mt={{ base: '86px', sm: "184px" }}>
-            <Flex flexDir="column" textAlign={{ base: 'center', sm: 'left' }} mb={{ base: '48px', sm: '0' }}>
+          <Flex
+            justifyContent="space-between"
+            flexDir={{ base: 'column', sm: 'row' }}
+            alignItems="center"
+            mt={{ base: '86px', sm: '184px' }}
+          >
+            <Flex
+              flexDir="column"
+              textAlign={{ base: 'center', sm: 'left' }}
+              mb={{ base: '48px', sm: '0' }}
+            >
               <Text fontSize="16px" color="#ffffff">
                 Made with love from our beloved city
               </Text>
