@@ -19,12 +19,22 @@ export const Button = defineStyleConfig({
       border: '1px solid',
       borderColor: '#A5B3CF',
       color: 'brand.secondary',
+      _hover: {
+        bg: 'black',
+        color: 'white',
+        borderColor: 'black',
+      },
     },
     white: {
       border: '1px solid',
       borderColor: 'white',
       color: 'brand.secondary',
       bg: 'white',
+      _hover: {
+        bg: 'black',
+        color: 'white',
+        borderColor: 'black',
+      },
     },
   },
   // The default size and variant values

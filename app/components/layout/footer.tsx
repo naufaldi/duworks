@@ -18,27 +18,46 @@ const Footer = () => {
             </Box>
           </Heading>
           <Flex w="full" flexDir={{ base: 'column', sm: 'row' }} justifyContent="space-between">
-            <Button variant="white" maxW="162px" w="full" mb={{ base: '64px', sm: '0px' }}>
+            <Button
+              onClick={(e) => {
+                window.location.href = 'mailto:hello@duringworks.com'
+                e.preventDefault()
+              }}
+              variant="white"
+              maxW="162px"
+              w="full"
+              mb={{ base: '64px', sm: '0px' }}
+            >
               Let’s Talks
               <ArrowRight boxSize="24px" ml="8px" />
             </Button>
             <HStack gap="32px" mx={{ base: 'auto', sm: '0' }} mb={{ base: '24px', sm: '0' }}>
-              <Link href="/">
+              <Link href="/" isExternal>
                 <LinkedIn boxSize="24px" />
               </Link>
-              <Link href="/">
+              <Link href="https://twitter.com/duringworks" isExternal>
                 <Twitter boxSize="24px" />
               </Link>
-              <Link href="/">
+              <Link href="https://dribbble.com/shots/21647852-Duringworks-landing-page" isExternal>
                 <Dribble boxSize="24px" />
               </Link>
-              <Link href="/">
+              <Link href="https://www.instagram.com/atduringworks/" isExternal>
                 <Instagram boxSize="24px" />
               </Link>
             </HStack>
-            <Text display={{ base: 'block', sm: 'none' }} mx="auto" fontSize="16px" color="#ffffff">
+            <Link
+              href="#"
+              onClick={(e) => {
+                window.location.href = 'mailto:hello@duringworks.com'
+                e.preventDefault()
+              }}
+              display={{ base: 'block', sm: 'none' }}
+              mx="auto"
+              fontSize="16px"
+              color="#ffffff"
+            >
               helo@dedux.com
-            </Text>
+            </Link>
           </Flex>
           <Flex
             justifyContent="space-between"
@@ -58,9 +77,18 @@ const Footer = () => {
                 Malang, Indonesia
               </Text>
             </Flex>
-            <Text fontSize="16px" color="#ffffff" display={{ base: 'none', sm: 'block' }}>
+            <Link
+              href="#"
+              onClick={(e) => {
+                window.location.href = 'mailto:hello@duringworks.com'
+                e.preventDefault()
+              }}
+              fontSize="16px"
+              color="#ffffff"
+              display={{ base: 'none', sm: 'block' }}
+            >
               helo@dedux.com
-            </Text>
+            </Link>
             <Text fontSize="16px" color="#ffffff">
               Alright Reserved ⓒ 2023
             </Text>

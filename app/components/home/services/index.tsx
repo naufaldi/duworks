@@ -4,6 +4,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Image,
   ListItem,
   Text,
   UnorderedList,
@@ -72,7 +73,16 @@ const Services = () => {
               transitionDuration="150ms"
               mb={{ base: '16px', sm: '0' }}
             >
-              <OvalRed position="absolute" top="0" right="0" zIndex="2" w="101px" h="124px" />
+              {/* <OvalRed position="absolute" top="0" right="0" zIndex="2" w="101px" h="124px" /> */}
+              <Image
+                src="/images/other/ornament.png"
+                position="absolute"
+                top="0"
+                right="0"
+                zIndex="2"
+                w="101px"
+                h="124px"
+              />
               <Heading as="h4" mb="28px" fontSize="24px" fontWeight="400" color="brand.primary">
                 {item.title}
               </Heading>
