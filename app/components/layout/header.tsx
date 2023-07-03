@@ -68,7 +68,9 @@ function Header() {
     >
       <Container maxW="1230px" mx="auto" w="full">
         <Flex w="full" justifyContent="space-between" alignItems="center">
-          <Logo w="122px" h="64px" zIndex={'15'} />
+          <ChakraLink as={RemixLink} to="/">
+            <Logo w="122px" h="64px" zIndex={'15'} />
+          </ChakraLink>
           <HStack spacing="56px" display={{ base: 'none', sm: 'flex' }}>
             <ChakraLink as={RemixLink} to="/" p="8px">
               About
