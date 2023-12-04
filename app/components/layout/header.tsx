@@ -72,13 +72,13 @@ function Header() {
             <Logo w="122px" h="64px" zIndex="15" />
           </ChakraLink>
           <HStack spacing="56px" display={{ base: 'none', sm: 'flex' }}>
-            <ChakraLink as={RemixLink} to="/" p="8px">
+            <ChakraLink as={RemixLink} to="/#about" p="8px">
               About
             </ChakraLink>
-            <ChakraLink as={RemixLink} to="/" p="8px">
+            <ChakraLink as={RemixLink} to="/#services" p="8px">
               Services
             </ChakraLink>
-            <ChakraLink as={RemixLink} to="/" p="8px">
+            <ChakraLink as={RemixLink} to="/#portfolio" p="8px">
               Portfolio
             </ChakraLink>
           </HStack>
@@ -92,6 +92,10 @@ function Header() {
             fontSize="base"
             bg="white"
             border="1px solid #A5B3CF"
+            onClick={(e: React.MouseEvent<HTMLElement>) => {
+              window.location.href = 'mailto:hello@duringworks.com'
+              e.preventDefault()
+            }}
           >
             Contact Us
             <MessagesIcon ml="8px" boxSize="24px" />
@@ -136,6 +140,10 @@ function Header() {
               fontSize="base"
               bg="white"
               border="1px solid #A5B3CF"
+              onClick={(e: React.MouseEvent<HTMLElement>) => {
+                window.location.href = 'mailto:hello@duringworks.com'
+                e.preventDefault()
+              }}
             >
               Contact Us
               <MessagesIcon ml="8px" boxSize="24px" />

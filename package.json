@@ -19,7 +19,8 @@
     "@remix-run/react": "^1.16.1",
     "@remix-run/vercel": "^1.16.1",
     "@vercel/node": "^2.10.3",
-    "framer-motion": "^6.5.1",
+    "framer-motion": "^10.16.9",
+    "install": "^0.13.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

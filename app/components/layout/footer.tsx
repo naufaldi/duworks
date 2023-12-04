@@ -1,4 +1,5 @@
 import { Box, Button, Container, Flex, Heading, HStack, Link, Text } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 import ArrowRight from '../icons/arrowRight'
 import Dribble from '../icons/social/dribble'
@@ -6,7 +7,11 @@ import Instagram from '../icons/social/instagram'
 import LinkedIn from '../icons/social/linkedIn'
 import Twitter from '../icons/social/twitter'
 
+import { useAnimations } from '~/constant/useAnimation'
+
 const Footer = () => {
+  const { scaleUpHover } = useAnimations()
+  const MotionLink = motion(Link)
   return (
     <Box as="footer" w="full" bg="#E5212E">
       <Container maxW="1232px" w="full" pt="50px" pb="21px">
@@ -19,7 +24,7 @@ const Footer = () => {
           </Heading>
           <Flex w="full" flexDir={{ base: 'column', sm: 'row' }} justifyContent="space-between">
             <Button
-              onClick={(e) => {
+              onClick={(e: React.MouseEvent<HTMLElement>) => {
                 window.location.href = 'mailto:hello@duringworks.com'
                 e.preventDefault()
               }}
@@ -32,22 +37,37 @@ const Footer = () => {
               <ArrowRight boxSize="24px" ml="8px" />
             </Button>
             <HStack gap="32px" mx={{ base: 'auto', sm: '0' }} mb={{ base: '24px', sm: '0' }}>
-              <Link href="/" isExternal>
+              <MotionLink variants={scaleUpHover} whileHover="hover" href="/" isExternal>
                 <LinkedIn boxSize="24px" />
-              </Link>
-              <Link href="https://twitter.com/duringworks" isExternal>
+              </MotionLink>
+              <MotionLink
+                variants={scaleUpHover}
+                whileHover="hover"
+                href="https://twitter.com/duringworks"
+                isExternal
+              >
                 <Twitter boxSize="24px" />
-              </Link>
-              <Link href="https://dribbble.com/shots/21647852-Duringworks-landing-page" isExternal>
+              </MotionLink>
+              <MotionLink
+                variants={scaleUpHover}
+                whileHover="hover"
+                href="https://dribbble.com/shots/21647852-Duringworks-landing-page"
+                isExternal
+              >
                 <Dribble boxSize="24px" />
-              </Link>
-              <Link href="https://www.instagram.com/atduringworks/" isExternal>
+              </MotionLink>
+              <MotionLink
+                variants={scaleUpHover}
+                whileHover="hover"
+                href="https://www.instagram.com/atduringworks/"
+                isExternal
+              >
                 <Instagram boxSize="24px" />
-              </Link>
+              </MotionLink>
             </HStack>
             <Link
               href="#"
-              onClick={(e) => {
+              onClick={(e: React.MouseEvent<HTMLElement>) => {
                 window.location.href = 'mailto:hello@duringworks.com'
                 e.preventDefault()
               }}
@@ -56,7 +76,7 @@ const Footer = () => {
               fontSize="16px"
               color="#ffffff"
             >
-              helo@dedux.com
+              hello@duringworks.com
             </Link>
           </Flex>
           <Flex
@@ -79,7 +99,7 @@ const Footer = () => {
             </Flex>
             <Link
               href="#"
-              onClick={(e) => {
+              onClick={(e: React.MouseEvent<HTMLElement>) => {
                 window.location.href = 'mailto:hello@duringworks.com'
                 e.preventDefault()
               }}
@@ -87,10 +107,10 @@ const Footer = () => {
               color="#ffffff"
               display={{ base: 'none', sm: 'block' }}
             >
-              helo@dedux.com
+              hello@duringworks.com
             </Link>
             <Text fontSize="16px" color="#ffffff">
-              Alright Reserved ⓒ 2023
+              Alright Reserved ⓒ {new Date().getFullYear()}
             </Text>
           </Flex>
         </Flex>

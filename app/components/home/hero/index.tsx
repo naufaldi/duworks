@@ -1,15 +1,26 @@
 import { Box, Button, Container, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react'
+import { useNavigate } from '@remix-run/react'
+import { motion } from 'framer-motion'
 
 import ArrowRight from '~/components/icons/arrowRight'
 import CurveRed from '~/components/icons/home/CurveRed'
 import CircleLeft from '~/components/pattern/hero/circleLeft'
 import CircleRight from '~/components/pattern/hero/circleRight'
-// import getImage from '~/utils/getImage'
+import { useAnimations } from '~/constant/useAnimation'
+import { useStaggerAnimation } from '~/constant/useStaggerAnimation'
 
 const Hero = () => {
-  // const { css, img } = await getImage('/images/home/hero-left.png')
+  const navigate = useNavigate()
+  const MotionBox = motion(Box)
+  const MotionHeading = motion(Heading)
+  const MotionButton = motion(Button)
+  const MotionText = motion(Text)
+  const MotionGrid = motion(Grid)
+  const MotionGridItem = motion(GridItem)
+  const { parentVariant } = useStaggerAnimation()
+  const { fadeIn, clipPathCircle } = useAnimations()
   return (
-    <Box as="section" id="hero" w="full" mt={{ md: '50px', lg: '160px' }}>
+    <MotionBox as="section" id="hero" w="full" mt={{ md: '50px', lg: '160px' }}>
       <Container
         maxW="1232px"
         w="full"
@@ -30,11 +41,14 @@ const Hero = () => {
           bottom={{ base: '-80px', sm: '-100px', lg: 'unset' }}
           right={{ base: '-100px', sm: '-160px' }}
         />
-        <Grid
+        <MotionGrid
           templateColumns={{ base: 'repeat(6,1fr)', sm: 'repeat(12,1fr)' }}
           columnGap="16px"
           position="relative"
           zIndex="2"
+          variants={parentVariant}
+          initial="hidden"
+          animate="visible"
         >
           <GridItem
             colSpan={{ base: 6, sm: 12, lg: 6 }}
@@ -43,7 +57,7 @@ const Hero = () => {
             alignItems="flex-start"
             justifyContent={{ sm: 'center', xl: 'flex-start' }}
           >
-            <Heading
+            <MotionHeading
               as="h2"
               fontSize={{ base: '40px', sm: '42px', xl: '48px' }}
               fontWeight="500"
@@ -52,30 +66,38 @@ const Hero = () => {
               lineHeight="56px"
               maxW="519px"
               w="full"
+              variants={fadeIn}
             >
               Crafting seamless{' '}
               <Box as="span" color="brand.primary">
                 user experiences
               </Box>{' '}
               that drive results
-            </Heading>
-            <Text
+            </MotionHeading>
+            <MotionText
               fontSize={{ base: '14px', sm: '16px' }}
               color="#7884A0"
               mb="32px"
               lineHeight="24px"
               maxW="436px"
               w="full"
+              variants={fadeIn}
             >
               We're a User Experience consultant and agency that provides a range of services to
               create intuitive, engaging, and effective user experiences for businesses.
-            </Text>
-            <Button maxW="162px" w="full" bg="white">
+            </MotionText>
+            <MotionButton
+              variants={fadeIn}
+              onClick={() => navigate('/#portfolio')}
+              maxW="162px"
+              w="full"
+              bg="white"
+            >
               Our Works
               <ArrowRight boxSize="24px" ml="8px" />
-            </Button>
+            </MotionButton>
           </GridItem>
-          <GridItem
+          <MotionGridItem
             colSpan={{ base: 6, sm: 11, lg: 6 }}
             colEnd={{ base: 7, sm: 12, lg: 13 }}
             colStart={{ base: 1, sm: 2, md: 1, lg: 7 }}
@@ -86,8 +108,11 @@ const Hero = () => {
             justifyContent="center"
             gap="16px"
             mt={{ base: '48px', sm: '12px', lg: '0' }}
+            variants={clipPathCircle}
+            initial="hidden"
+            animate="visible"
           >
-            <Box>
+            <Box overflow="hidden">
               <Image
                 src="/images/home/hero-left.png"
                 width="100%"
@@ -106,7 +131,7 @@ const Hero = () => {
               w={{ base: '71px', sm: '101px' }}
               h={{ base: '60px', sm: '124px' }}
             />
-            <Box pt={{ base: '14px', sm: '28px' }}>
+            <Box overflow="hidden" pt={{ base: '14px', sm: '28px' }}>
               <Image
                 src="/images/home/hero-right.png"
                 mt={{ base: '14px', sm: '28px' }}
@@ -118,10 +143,10 @@ const Hero = () => {
                 alt="Duworks"
               />
             </Box>
-          </GridItem>
-        </Grid>
+          </MotionGridItem>
+        </MotionGrid>
       </Container>
-    </Box>
+    </MotionBox>
   )
 }
 

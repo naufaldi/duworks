@@ -9,14 +9,30 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react'
-import React from 'react'
+import { motion } from 'framer-motion'
 
 import Circle from '~/components/pattern/service/circle'
 import { ServiceList } from '~/constant/serviceList'
-
+import { useAnimations } from '~/constant/useAnimation'
+import { useStaggerAnimation } from '~/constant/useStaggerAnimation'
 const Services = () => {
+  const { parentVariant, childVariant } = useStaggerAnimation()
+  const { fadeInRight, fadeInUp } = useAnimations()
+
+  const MotionBox = motion(Box)
+  const MotionHeading = motion(Heading)
+  const MotionGrid = motion(Grid)
+  const MotionGridItem = motion(GridItem)
   return (
-    <Box as="section" id="services" w="full">
+    <MotionBox
+      as="section"
+      id="services"
+      w="full"
+      variants={parentVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <Container
         maxW="1232px"
         w="full"
@@ -37,21 +53,34 @@ const Services = () => {
           zIndex="2"
         >
           <GridItem colSpan={{ base: 6, sm: 1 }} mb="14px">
-            <Heading as="h6" fontSize="16px" color="brand.primary" fontWeight="400">
+            <MotionHeading
+              variants={fadeInUp}
+              as="h6"
+              fontSize="16px"
+              color="brand.primary"
+              fontWeight="400"
+            >
               Services
-            </Heading>
+            </MotionHeading>
           </GridItem>
           <GridItem colSpan={{ base: 6, sm: 12 }} mb="32px">
-            <Heading as="h2" fontSize="40px" fontWeight="400" color="brand.secondary">
+            <MotionHeading
+              variants={fadeInUp}
+              as="h2"
+              fontSize="40px"
+              fontWeight="400"
+              color="brand.secondary"
+            >
               We offer a wide range of services to help businesses improve their digital user
               experience{' '}
               <Box as="span" color="brand.primary">
                 with our experienced designers and researchers teams.
               </Box>
-            </Heading>
+            </MotionHeading>
           </GridItem>
           {ServiceList.map((item, index) => (
-            <GridItem
+            <MotionGridItem
+              variants={fadeInRight}
               key={index}
               colSpan={{ base: 6, sm: 6, lg: 4 }}
               bg="white"
@@ -93,11 +122,11 @@ const Services = () => {
                   <ListItem key={index}>{listItem}</ListItem>
                 ))}
               </UnorderedList>
-            </GridItem>
+            </MotionGridItem>
           ))}
         </Grid>
       </Container>
-    </Box>
+    </MotionBox>
   )
 }
 
