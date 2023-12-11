@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 import CurveRed from '~/components/icons/home/CurveRed'
 import Circle from '~/components/pattern/about/circle'
-import { useStaggerAnimation } from '~/constant/useStaggerAnimation'
+import { useStaggerAnimation } from '~/hooks/useStaggerAnimation'
 
 const About = () => {
   const { parentVariant, childVariant } = useStaggerAnimation()

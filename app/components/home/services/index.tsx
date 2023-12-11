@@ -16,12 +16,12 @@ import { ServiceList } from '~/constant/serviceList'
 import { useAnimations } from '~/hooks/useAnimation'
 import { useStaggerAnimation } from '~/hooks/useStaggerAnimation'
 const Services = () => {
-  const { parentVariant, childVariant } = useStaggerAnimation()
+  const { parentVariant } = useStaggerAnimation()
   const { fadeInRight, fadeInUp } = useAnimations()
 
   const MotionBox = motion(Box)
   const MotionHeading = motion(Heading)
-  const MotionGrid = motion(Grid)
+
   const MotionGridItem = motion(GridItem)
   return (
     <MotionBox
