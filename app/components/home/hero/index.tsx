@@ -6,8 +6,8 @@ import ArrowRight from '~/components/icons/arrowRight'
 import CurveRed from '~/components/icons/home/CurveRed'
 import CircleLeft from '~/components/pattern/hero/circleLeft'
 import CircleRight from '~/components/pattern/hero/circleRight'
-import { useAnimations } from '~/constant/useAnimation'
-import { useStaggerAnimation } from '~/constant/useStaggerAnimation'
+import { useAnimations } from '~/hooks/useAnimation'
+import { useStaggerAnimation } from '~/hooks/useStaggerAnimation'
 
 const Hero = () => {
   const navigate = useNavigate()

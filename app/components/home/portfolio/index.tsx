@@ -1,8 +1,8 @@
 import { Box, Container, Grid, GridItem, Heading, Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-import { useAnimations } from '~/constant/useAnimation'
-import { useStaggerAnimation } from '~/constant/useStaggerAnimation'
+import { useAnimations } from '~/hooks/useAnimation'
+import { useStaggerAnimation } from '~/hooks/useStaggerAnimation'
 
 const PortfolioList = [
   {
@@ -43,7 +43,6 @@ const Portfolio = () => {
 
   const MotionBox = motion(Box)
   const MotionHeading = motion(Heading)
-  const MotionGrid = motion(Grid)
   const MotionGridItem = motion(GridItem)
   const MotionImage = motion(Image)
   return (

@@ -7,7 +7,7 @@ import Instagram from '../icons/social/instagram'
 import LinkedIn from '../icons/social/linkedIn'
 import Twitter from '../icons/social/twitter'
 
-import { useAnimations } from '~/constant/useAnimation'
+import { useAnimations } from '~/hooks/useAnimation'
 
 const Footer = () => {
   const { scaleUpHover } = useAnimations()
