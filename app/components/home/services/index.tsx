@@ -13,8 +13,8 @@ import { motion } from 'framer-motion'
 
 import Circle from '~/components/pattern/service/circle'
 import { ServiceList } from '~/constant/serviceList'
-import { useAnimations } from '~/constant/useAnimation'
-import { useStaggerAnimation } from '~/constant/useStaggerAnimation'
+import { useAnimations } from '~/hooks/useAnimation'
+import { useStaggerAnimation } from '~/hooks/useStaggerAnimation'
 const Services = () => {
   const { parentVariant, childVariant } = useStaggerAnimation()
   const { fadeInRight, fadeInUp } = useAnimations()
