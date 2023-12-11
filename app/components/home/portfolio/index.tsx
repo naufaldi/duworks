@@ -43,7 +43,6 @@ const Portfolio = () => {
 
   const MotionBox = motion(Box)
   const MotionHeading = motion(Heading)
-  const MotionGrid = motion(Grid)
   const MotionGridItem = motion(GridItem)
   const MotionImage = motion(Image)
   return (
